@@ -1,0 +1,370 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+  @import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@300;700&family=Quicksand:wght@500&display=swap');
+  
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+
+/*   ----- Variables  -----  */
+:root {
+    --custom-embellishment-name:;
+    --blue:                 rgba(101, 149, 191, 1);
+    --cloudBlue:            rgba(199, 217, 221, 1);
+    --darkGreen:          	rgba(33, 47, 24, 1);
+    --brownTransparent:	    rgba(140, 107, 66, 0.7);
+    --sandTransparent:      rgba(202, 170, 138, 0.8);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-image:url(images/boulder-mountain-park-colorado.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    color:var(--darkGreen);
+    /* font-family:;  Define with at least one font name and its related generic family name.*/
+    font-family: 'Palanquin', sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 900px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--brownTransparent);
+    text-align: center;
+    height: 1%;
+    margin: 0 0 2% 0;
+    padding: 2% 3%;
+  }
+  header h1 {
+    background-color: var(--sandTransparent);
+    border-radius: 15px;
+    margin: 0;
+    padding: 1% 5%;
+    line-height: 1.75;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  header img {
+    width: 50px;
+    margin: 0 2%;
+    padding: 0;
+  }
+  main {
+    background-color: var(--brownTransparent);
+    margin: 0;
+    padding: 2% 3%;
+    line-height: 1.75;
+    text-align: left;
+  }
+  section {
+    background-color: var(--sandTransparent);
+    border-radius: 15px;
+    margin: 0;
+    padding: 1% 5%;
+  }
+    article {}
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {
+    background-color: var(--brownTransparent);
+    text-align: center;
+    height: 3%;
+    margin: 0 0 2% 0;
+    padding: 2% 3%;
+    color: var(--cloudBlue);
+  }
+  footer p {
+    background-color: var(--sandTransparent);
+    border: 5px solid var(--brownTransparent);
+    border-radius: 15px;
+    margin: 0;
+    padding: 1% 5%;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    text-align: center;
+    margin: 0;
+    padding: 1% 0 0 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    border-right: 2px solid var(--darkGreen);
+    text-decoration: none;
+    background-color: var(--cloudBlue);
+    border-radius: 5px 5px 0 0;
+    margin: 5px 2px 0 2px;
+    padding: 0 2%;
+  }
+  nav a:hover {
+    background-color: var(--brownTransparent);
+    color: var(--cloudBlue)
+  }
+  nav.local {
+    background-color: var(--brownTransparent);
+    border-radius: 5px;
+    margin: 3%;
+    padding: 2% 1% 0 1%;
+  }
+  nav.local a {
+    background-color: var(--cloudBlue);
+  }
+  nav.local a:hover {
+    background-color: var(--sandTransparent);
+    color: var(--cloudBlue);
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+  } 
+  h1 {}
+  h2 {}
+  h3 {
+    border-bottom: 5px solid var(--blue);
+    border-radius: 5px;
+  }
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {
+    font-style: italic;
+  }
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    width: 95%;
+    border-bottom: 5px solid var(--blue);
+    border-radius: 8px;
+    margin: 0 0 3% 0;
+    padding: 0 0 1% 0;
+  }
+  caption {
+    border-bottom: 3px solid var(--blue);
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 120%;
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+  tr {}
+    tr:nth-child(even) {
+      background-color: var(--brownTransparent);
+    }
+  th {}
+  td {}
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  td, th {
+    padding: 0 5% 0 0;
+  }
+  tr th{
+    background-color: var(--sandTransparent);
+    border-bottom: 5px solid var(--darkGreen);
+    border-radius: 6px;
+    color: var(--darkGreen);
+    text-align: left;
+    padding: 0 0 0 1%;
+    font-size: 110%;
+  }
+  tr td {
+    background-color: var(--sandTransparent);
+    border-bottom: 2px inset var(--brownTransparent);
+    padding: 1% 0 1% 1%;
+    
+  }
+  .price {
+    text-align: right;
+  }
+
+  /*  ----- Form ----- */
+  form {}
+  fieldset {
+    background-color: var(--sandTransparent);
+    border: 4px solid var(--cloudBlue);
+    border-radius: 5px;
+    margin: 1%;
+    padding: 0 3% 3% 3%;
+  }
+    legend {
+      background-color: var(--sandTransparent);
+      border-left: 4px solid var(--cloudBlue);
+      border-right: 4px solid var(--cloudBlue);
+      border-radius: 10px;
+      margin: 2%;
+      padding: 0 1%;
+      font-size: 105%;
+      font-weight: bold;
+    }
+  button, input, select, textarea {
+    font-family: inherit;
+    padding: 1% 3%;
+  }
+  label {
+    color: var(--darkGreen);
+    font-size: 115%;
+    display: block;
+    margin: 0;
+  }
+    button {
+      border-color: var(--blue);
+      border-radius: 5px;
+    }
+    input {}
+    output {}
+    meter {}
+    progress {}
+    select {}
+      optgroup {}
+      option {}
+    textarea {
+      height: 85%;
+      width: 85%;
+    }
+  label.required::after {
+    content:" *";
+    color: red;
+  }
+  :focus {
+    background-color: var(--cloudBlue);
+  }
+  *:required {
+    border: 3px solid green;
+    border-radius: 5px;
+  }
+  .orderButton {
+    margin: 2% 0 0 0;
+  }
+  
+  /* ----- Media ----- */
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  .gallery figure, img {
+    width: 300px;
+  }
+  figure {
+    background-color: var(--sandTransparent);
+    border: 3px solid var(--blue);
+    border-radius: 5px;
+    margin: 2%;
+    padding: 1%;
+  }
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  i {
+    font-size: 130%;
+  }
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
