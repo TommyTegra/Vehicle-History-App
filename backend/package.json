@@ -1,0 +1,20 @@
+{
+  "name": "car-history-backend",
+  "version": "1.0.0",
+  "description": "A history log of a vehicle's repairs and maintenance based on dates and mileage.",
+  "main": "car-history-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon car-history-controller.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "rest": "^2.0.0"
+  }
+}

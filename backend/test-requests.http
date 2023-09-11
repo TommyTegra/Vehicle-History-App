@@ -1,0 +1,82 @@
+### CREATE five documents.
+POST http://localhost:3000/serviceLogs HTTP/1.1
+content-type: application/json
+
+{
+    "service": "Motor Oil Change",
+    "mileage": 35000,
+    "date": "11-05-2020"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/serviceLogs HTTP/1.1
+content-type: application/json
+
+{
+    "service": "Tire Rotation",
+    "mileage": 28000,
+    "date": "01-25-2020"
+}
+
+### CREATE 3
+POST http://localhost:3000/serviceLogs HTTP/1.1
+content-type: application/json
+
+{
+    "service": "Suspension Alignment",
+    "mileage": 20000,
+    "date": "06-15-2019"
+}
+
+### CREATE 4
+POST http://localhost:3000/serviceLogs HTTP/1.1
+content-type: application/json
+
+{
+    "service": "Transmission Fluid Change",
+    "mileage": 30000,
+    "date": "05-23-2020"
+}
+
+### CREATE 5
+POST http://localhost:3000/serviceLogs HTTP/1.1
+content-type: application/json
+
+{
+    "service": "In-Cabin Air Filter Replacement",
+    "mileage": 32000,
+    "date": "07-28-2020"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/serviceLogs HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/serviceLogs/64d88fd9ff6e8022abc09c46 HTTP/1.1
+
+
+### UPDATE one document's mileage, by ID.
+### Replace the ID in the following request with one that exists
+### and update the mileage:
+PUT http://localhost:3000/serviceLogs/64ddd7ea60df1247610aab3b HTTP/1.1
+content-type: application/json
+
+{
+    "service": "Suspension Alignment",
+    "mileage": 23000,
+    "date": "08-20-2019"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/serviceLogs/64d88fdaff6e8022abc09c48 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/serviceLogs HTTP/1.1
+
