@@ -19,7 +19,7 @@ app.use(express.json());  // REST needs JSON MIME type.
 
 
 // CREATE controller ******************************************
-app.post ('/serviceLogs', (req,res) => { 
+app.post ('https://vehicle-history-backend.onrender.com/serviceLogs', (req,res) => { 
     serviceLogs.createLog(
         req.body.service, 
         req.body.mileage, 
@@ -36,7 +36,7 @@ app.post ('/serviceLogs', (req,res) => {
 
 
 // RETRIEVE controller ****************************************************
-app.get('/serviceLogs', (req, res) => {
+app.get('https://vehicle-history-backend.onrender.com/serviceLogs', (req, res) => {
     serviceLogs.retrieveLog()
         .then(record => { 
             if (record !== null) {
@@ -53,7 +53,7 @@ app.get('/serviceLogs', (req, res) => {
 
 
 // RETRIEVE by ID controller
-app.get('/serviceLogs/:_id', (req, res) => {
+app.get('https://vehicle-history-backend.onrender.com/serviceLogs/:_id', (req, res) => {
     serviceLogs.retrieveLogById(req.params._id)
     .then(record => { 
         if (record !== null) {
@@ -71,7 +71,7 @@ app.get('/serviceLogs/:_id', (req, res) => {
 
 
 // UPDATE controller ************************************
-app.put('/serviceLogs/:_id', (req, res) => {
+app.put('https://vehicle-history-backend.onrender.com/serviceLogs/:_id', (req, res) => {
     serviceLogs.updateLog(
         req.params._id, 
         req.body.service, 
@@ -89,7 +89,7 @@ app.put('/serviceLogs/:_id', (req, res) => {
 
 
 // DELETE Controller ******************************
-app.delete('/serviceLogs/:_id', (req, res) => {
+app.delete('https://vehicle-history-backend.onrender.com/serviceLogs/:_id', (req, res) => {
     serviceLogs.deleteLogById(req.params._id)
         .then(deletedCount => {
             if (deletedCount === 1) {

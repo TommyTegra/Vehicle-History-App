@@ -10,7 +10,7 @@ export const EditServicePageTable = ({ serviceToEdit }) => {
     const redirect = useNavigate();
 
     const editService = async () => {
-        const response = await fetch(`/serviceLogs/${serviceToEdit._id}`, {
+        const response = await fetch(`https://vehicle-history-backend.onrender.com/serviceLogs/${serviceToEdit._id}`, {
             method: 'PUT',
             body: JSON.stringify({ 
                 service: service, 

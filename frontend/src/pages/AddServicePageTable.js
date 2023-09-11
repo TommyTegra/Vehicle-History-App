@@ -11,7 +11,7 @@ export const AddServicePageTable = () => {
 
     const addService = async () => {
         const newService = { service, mileage, date };
-        const response = await fetch('/serviceLogs', {
+        const response = await fetch('https://vehicle-history-backend.onrender.com/serviceLogs', {
             method: 'post',
             body: JSON.stringify(newService),
             headers: {
