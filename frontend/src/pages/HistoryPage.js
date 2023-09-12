@@ -45,9 +45,12 @@ function HistoryPage({ setService }) {
     // DISPLAY the services
     return (
         <>
-            <h2>History List of Service Logs</h2>
+            <h2>History List of Service Logs <strong>&#40;DEMO ONLY&#41;</strong></h2>
             <p>Please use the icon associated with the action you would like to perform, such as, 
-                adding, editing, or deleting a service log.
+                adding, editing, or deleting a service log. <em>For demonstration purposes only. 
+                The history log is public use with open access. Anyone can add, modified, or delete 
+                logs. Exercise caution and refrain from using real or sensitive information in this 
+                log, as changes made by one user will be visible to all. </em>
             </p>
             <HistoryTable 
                 services={services} 
