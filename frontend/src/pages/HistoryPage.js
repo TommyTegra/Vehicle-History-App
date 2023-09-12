@@ -27,9 +27,9 @@ function HistoryPage({ setService }) {
 
     // DELETE a single service  
     const onDeleteService = async _id => {
-        const response = await fetch(`https://vehicle-history-backend.onrender.com/serviceLogs/${_id}`, { method: 'DELETE' });
+        const response = await fetch(`/serviceLogs/${_id}`, { method: 'DELETE' });
         if (response.status === 200) {
-            const getResponse = await fetch('https://vehicle-history-backend.onrender.com/serviceLogs');
+            const getResponse = await fetch('/serviceLogs');
             const services = await getResponse.json();
             setServices(services);
         } else {
