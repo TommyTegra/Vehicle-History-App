@@ -1,7 +1,7 @@
 import React from 'react';
 import { VscTrash, VscEdit } from 'react-icons/vsc';
 
-function Service({ service, onEdit, onDelete }) {
+function Service({ service, onDelete, onEdit }) {
     return (
         <tr>
             <td>{service.service}</td>
