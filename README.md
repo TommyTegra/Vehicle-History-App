@@ -6,3 +6,5 @@ The application supports Create, Read, Update, and Delete actions (CRUD), empowe
 Within the React framework, the app delivers an engaging user interface, ensuring both visual appeal and functionality. 
 
 Users can record automotive service details, facilitating the creation of a comprehensive and accessible vehicle service history report.
+
+For demonstration purposes only. The history log is public use with open access. Anyone can add, modified, or delete logs. Exercise caution and refrain from using real or sensitive information in this log, as changes made by one user will be visible to all.
